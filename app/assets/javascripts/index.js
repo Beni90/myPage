@@ -1,7 +1,5 @@
-$(document).ready(function(){
-	$("#moreInfoButton").click(function() {
-	    $('html, body').animate({
-	        scrollTop: $("#services").offset().top
-	    }, 2000);
-		}
-});
+    $("#moreInfoButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#services").offset().top
+    }, 1500);
+	});

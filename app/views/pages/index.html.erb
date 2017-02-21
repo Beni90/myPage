@@ -8,9 +8,9 @@
 
     <title>Benjamin Buff - Introduction Page</title>
     
-    <!-- JS Files -->
-    <script type="text/javascript" src="../../assets/javascripts/application.js"></script>
-
+    <!-- include application.js -->
+	<%= javascript_include_tag "application" %>
+	
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -30,16 +30,17 @@
             <h1>Benjamin Buff</h1>
             <h3>Design | Front/> | Requirements Engineering</h3>
             <br>
-            <a id="moreInfoButton" class="btn btn-dark btn-lg">Find Out More</a>
+            <a id="moreInfoButton" 
+	            <i class="fa fa-arrow-circle-down fa-5x" aria-hidden="true"></i> 
+	        </a>
         </div>
     </header>
 
     <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-12 col-lg-offset-1">
                     <h2>Our Services</h2>
                     <hr class="small">
                     <div class="row">
@@ -116,7 +117,7 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <div class="col-lg-12 col-lg-offset-1 text-center">
                     <h2>Our Work</h2>
                     <hr class="small">
                     <div class="row">
@@ -185,11 +186,11 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Benjamin Buff</strong>
-                    </h4>
+                <div class="col-lg-12 col-lg-offset-1 text-center">
+                    <h4><strong>Benjamin Buff</strong></h4>
                     <p>Boulevard Lilienthal 3
-                        <br>8152 Opfikon-Glattpark</p>
+                    <br>
+                    8152 Opfikon-Glattpark</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> 076 426 18 86</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
@@ -214,13 +215,16 @@
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
+    
 
     <!-- Custom Theme JavaScript -->
+
     <script>
+	// Scrolls to services section if the button gets clicked
     $("#moreInfoButton").click(function() {
     $('html, body').animate({
         scrollTop: $("#services").offset().top
-    }, 2000);
+    }, 1500);
 	});
     
     // Scrolls to the selected menu item on the page
